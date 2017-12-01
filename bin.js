@@ -13,7 +13,7 @@ let argv = minimist(process.argv.slice(2), {
 
 let usage = `
   Usage:
-    $ gitlab-standard-labels <project>
+    $ gitlab-standard-labels <project-id>
   Commands:
     <default>   Create a set of labels for a project
   Options:
@@ -30,7 +30,7 @@ let usage = `
   } else {
     let repository = argv._[0]
     if (!repository) {
-      console.error('Project ID missing')
+      console.error('Project ID/name is missing')
       process.exit(1)
     }
     labels.init(repository)

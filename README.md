@@ -2,10 +2,29 @@
 
 Create a standard set of issue labels for a GitLab CE project via API
 
+## Installation
+Install the package
+```bash
+npm install --save gitlab-standard-labels
+```
+
+Copy the example configuration
+```bash
+cp config.example.json config.json
+```
+
+Set the configuration in `config.json`
+```json
+{
+    "host":"https://gitlab.example.com",
+    "token":"Your-Private-Token"
+}
+```
+
 ## Usage
 ```txt
   Usage:
-    $ gitlab-standard-labels <project>
+    $ gitlab-standard-labels <project-id>
 
   Commands:
     <default>   Create a set of labels for a project
@@ -14,29 +33,6 @@ Create a standard set of issue labels for a GitLab CE project via API
     -d, --delete    Delete previous existing labels
     -h, --help      Print usage
     -v, --version   Print version
-```
-
-## Labels
-```txt
-duplicate             #ededed
-greenkeeper           #ededed
-starter               #ffc0cb
-Priority: Critical    #ee0701
-Priority: High        #d93f0b
-Priority: Low         #0e8a16
-Priority: Medium      #fbca04
-Status: Abandoned     #000000
-Status: Available     #c2e0c6
-Status: Blocked       #ee0701
-Status: In Progress   #cccccc
-Status: On Hold       #e99695
-Status: Proposal      #d4c5f9
-Status: Review Needed #fbca04
-Type: Bug             #ee0701
-Type: Documentation   #5319e7
-Type: Enhancement     #1d76db
-Type: Maintenance     #fbca04
-Type: Question        #cc317c
 ```
 
 

@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@gitlab.test5.hce.it:hce/tools/gitlab-standard-labels.git"
+    "url": "git+ssh://git@gitlab.test5.hce.it:hce/tools/gitlab-standard-labels.git"
   },
   "author": "fsavina@hce.it",
   "license": "MIT",

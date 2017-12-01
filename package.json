@@ -1,0 +1,22 @@
+{
+  "name": "gitlab-standard-labels",
+  "version": "1.0.0",
+  "description": "Create a default set of labels for GitLab CE",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.test5.hce.it:hce/tools/gitlab-standard-labels.git"
+  },
+  "author": "fsavina@hce.it",
+  "license": "MIT",
+  "bin": {
+    "gitlab-standard-labels": "./bin.js"
+  },
+  "dependencies": {
+    "axios": "^0.17.1",
+    "minimist": "^1.2.0"
+  }
+}

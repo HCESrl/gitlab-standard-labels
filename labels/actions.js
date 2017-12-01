@@ -28,7 +28,7 @@ const cleanUp = async repository => {
 
   try {
     const onlineLabels = await getAll(repository)
-    const labelsDeleteActionsUrl = onlineLabels.map(label => `${entry}&name=${label.name}`)
+    const labelsDeleteActionsUrl = onlineLabels.map(label => `${entry}?name=${label.name}`)
     return Promise.all(labelsDeleteActionsUrl.map(axios.delete))
   } catch (error) {
     throw new Error(error.message)

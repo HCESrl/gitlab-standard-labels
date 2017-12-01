@@ -7,7 +7,7 @@ const setStandardLabels = async ([repository]) => {
   console.info(`Creating all labels in ${repository}`)
 
   try {
-    create(repository)
+    return create(repository)
   } catch (error) {
     throw new Error(error.message)
   }

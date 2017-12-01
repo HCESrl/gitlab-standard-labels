@@ -1,9 +1,7 @@
 #!/usr/bin/env node
 
-const minimist = require('minimist')
 const { parseArgs, die, parseUserAction } = require('./console/utilities')
 const { actions, defaultActionKey } = require('./console/actions')
-const labels = require('./labels')
 const argv = parseArgs(process.argv.slice(2))
 
 const main = async (input = argv) => {

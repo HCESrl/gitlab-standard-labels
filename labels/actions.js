@@ -1,5 +1,4 @@
 const { host, labels, token } = require('../config')
-const { die } = require('../console/utilities')
 const axios = require('axios')
 
 axios.defaults.headers.common['PRIVATE-TOKEN'] = token

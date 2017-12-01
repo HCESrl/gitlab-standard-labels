@@ -13,7 +13,7 @@
   "author": "fsavina@hce.it",
   "license": "MIT",
   "bin": {
-    "gitlab-standard-labels": "./bin.js"
+    "gitlab-standard-labels": "./index.js"
   },
   "dependencies": {
     "axios": "^0.17.1",

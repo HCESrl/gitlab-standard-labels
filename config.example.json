@@ -7,17 +7,20 @@
         {
             "name":"todo",
             "color":"#2876B8",
-            "priority":1
+            "priority":1,
+            "board":true
         },
         {
             "name":"doing",
             "color":"#fbca04",
-            "priority":1
+            "priority":1,
+            "board":true
         },
         {
             "name":"done",
             "color":"#447708",
-            "priority":1
+            "priority":1,
+            "board":true
         },
         {
             "name":"tbd",

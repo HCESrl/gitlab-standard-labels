@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-const { parseArgs, die, parseUserAction } = require('./console/utilities')
-const { actions, defaultActionKey } = require('./console/actions')
+const { die, parseArgs } = require('./console/utilities')
+const { actions, defaultActionKey, parseUserAction } = require('./console/actions')
 const argv = parseArgs(process.argv.slice(2))
 
 const main = async (input = argv) => {
@@ -11,7 +11,7 @@ const main = async (input = argv) => {
   if (typeof requestedAction === 'undefined') return die('Not a valid action')
 
   try {
-    const message = await requestedAction(input._)
+    const message = await requestedAction(input._, input.delete || input.d)
     process.exit(0)
   } catch (error) {
     console.log(error)

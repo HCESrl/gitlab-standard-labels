@@ -1,5 +1,13 @@
 const minimist = require('minimist')
 
+const defaultArgsOptions = {
+  boolean: [
+    'delete', 'd',
+    'version', 'v',
+    'help', 'h'
+  ]
+}
+
 const usage = `
   Usage:
     $ gitlab-standard-labels <project-id>
@@ -17,14 +25,6 @@ const printUsage = () => { console.info(usage) }
 
 const printVersion = () => { console.info(`v${version}`) }
 
-const defaultArgsOptions = {
-  boolean: [
-    'delete',
-    'version',
-    'help'
-  ]
-}
-
 const parseArgs = (args, options = defaultArgsOptions) => minimist(process.argv.slice(2), options)
 
 const die = message => {
@@ -32,17 +32,9 @@ const die = message => {
   process.exit(1)
 }
 
-const parseUserAction = (input, defaultKey) => {
-  const entries = Object.entries(input)
-  const inputAction = entries.find(entry => entry[1] === true)
-  return typeof inputAction !== 'undefined' ? inputAction[0] : defaultKey
-}
-
 module.exports = {
-  defaultArgsOptions,
-  parseArgs,
   printUsage,
   printVersion,
-  die,
-  parseUserAction
+  parseArgs,
+  die
 }

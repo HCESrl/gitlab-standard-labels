@@ -1,6 +1,6 @@
 # gitlab-standard-labels [![stability][0]][1]
 
-Create a standard set of issue labels for a GitLab CE project via API
+Create a standard set of issue labels and board lists for a GitLab CE project via API.
 
 ## Installation
 Install the package
@@ -17,9 +17,13 @@ Set the configuration in `config.json`
 ```json
 {
     "host":"https://gitlab.example.com",
-    "token":"Your-Private-Token"
+    
+    "token":"Your-Private-Token",
+    
+    "labels":[...]
 }
 ```
+> *Note:* you can get the private token from your account settings. The token can also be set as a command argument.
 
 ## Usage
 ```txt
@@ -30,9 +34,11 @@ Set the configuration in `config.json`
     <default>   Create a set of labels for a project
 
   Options:
-    -d, --delete    Delete previous existing labels
-    -h, --help      Print usage
-    -v, --version   Print version
+      -t, --token=    The authentication token, overwrites the token in config.json, if defined
+      -d, --delete    Delete previous existing labels and board lists before the creation
+      -b, --board     Create default board lists
+      -h, --help      Print usage
+      -v, --version   Print version
 ```
 
 

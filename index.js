@@ -11,7 +11,12 @@ const main = async (input = argv) => {
   if (typeof requestedAction === 'undefined') return die('Not a valid action')
 
   try {
-    const message = await requestedAction(input._, input.delete || input.d)
+    const options = {
+      delete: input.delete || input.d,
+      board: input.board || input.b,
+      token: typeof input.token !== 'undefined' ? input.token : null
+    }
+    const message = await requestedAction(input._, options)
     process.exit(0)
   } catch (error) {
     console.log(error)

@@ -35,7 +35,11 @@ const printVersion = () => {
   console.info(`v${version}`)
 }
 
-const parseArgs = (args, options = defaultArgsOptions) => minimist(process.argv.slice(2), options)
+const parseArgs = (args, options = defaultArgsOptions) => {
+  let parsed = minimist(args, options)
+  parsed._ = parsed._.map(arg => arg.replace('\\', '/'))
+  return parsed
+}
 
 const die = message => {
   console.error(message)

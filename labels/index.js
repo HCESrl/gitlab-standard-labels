@@ -9,11 +9,16 @@ const setStandardLabels = async ([repository], options) => {
     if (options.token !== null) {
       setPrivateToken(options.token)
     }
-    const board = await getBoard(repository)
 
+    if (typeof options.board !== 'undefined' && options.board) {
+      const board = await getBoard(repository)
+    }
+    
     if (typeof options.delete !== 'undefined' && options.delete) {
-      console.info(`Deleting all board lists in repository ${repository}`)
-      const deleteListsResult = await deleteBoardLists(repository, board)
+      if (typeof options.board !== 'undefined' && options.board && typeof board !== 'undefined' && board !== null) {
+        console.info(`Deleting all board lists in repository ${repository}`)
+        const deleteListsResult = await deleteBoardLists(repository, board)
+      }
 
       console.info(`Deleting all labels in repository ${repository}`)
       const cleanUpResult = await deleteLabels(repository)
@@ -22,7 +27,7 @@ const setStandardLabels = async ([repository], options) => {
     console.info(`Creating all labels in repository ${repository}`)
     const responses = await createLabels(repository)
 
-    if (typeof options.board !== 'undefined' && options.board) {
+    if (typeof options.board !== 'undefined' && options.board && typeof board !== 'undefined' && board !== null) {
       console.info(`Creating default board lists in repository ${repository}`)
       return createBoardLists(repository, board, responses.map(response => response.data))
     }

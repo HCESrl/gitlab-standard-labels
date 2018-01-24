@@ -1,16 +1,15 @@
 {
   "name": "gitlab-standard-labels",
-  "version": "1.0.0",
-  "description": "Create a default set of labels for GitLab CE",
+  "version": "0.0.1",
+  "description": "Create a standard set of issue labels and board lists for a GitLab CE project.",
   "main": "index.js",
   "scripts": {
     "start": "node ."
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@gitlab.test5.hce.it:hce/tools/gitlab-standard-labels.git"
+    "url": "https://github.com/HCESrl/gitlab-standard-labels.git"
   },
-  "author": "fsavina@hce.it",
   "license": "MIT",
   "bin": {
     "gitlab-standard-labels": "./index.js"

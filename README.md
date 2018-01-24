@@ -33,6 +33,9 @@ Set the configuration in `config.json`
   Commands:
     <default>   Create a set of labels for a project
 
+  Arguments:
+    <project-id|project-name>   `project-id` is the numeric ID of the repository, `project-name`is the the namespaced repository name (eg. "group/repo").
+
   Options:
       -t, --token=    The authentication token, overwrites the token in config.json, if defined
       -d, --delete    Delete previous existing labels and board lists before the creation
@@ -40,10 +43,6 @@ Set the configuration in `config.json`
       -h, --help      Print usage
       -v, --version   Print version
 ```
-
-*  *project-id*: is the numeric ID of the repository;
-*  *project-name*: is the numeric the namespaced repository name (eg. "group/repo");
-
 
 ## License
 [MIT](https://tldrlegal.com/license/mit-license)

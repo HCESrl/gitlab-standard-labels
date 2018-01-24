@@ -14,7 +14,7 @@ const defaultArgsOptions = {
 
 const usage = `
   Usage:
-    $ gitlab-standard-labels <project-id>
+    $ gitlab-standard-labels <project-id|project-name>
   Commands:
     <default>   Create a set of labels for a project
   Options:

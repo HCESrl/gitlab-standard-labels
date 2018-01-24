@@ -3,9 +3,15 @@
 Create a standard set of issue labels and board lists for a GitLab CE project via API.
 
 ## Installation
-Install the package
+Clone the package repository
 ```bash
-npm install gitlab-standard-labels
+git clone git@github.com:HCESrl/gitlab-standard-labels.git
+```
+
+Install the dependencies
+```bash
+cd gitlab-standard-labels
+yarn
 ```
 
 Copy the example configuration

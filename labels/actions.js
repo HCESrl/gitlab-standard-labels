@@ -34,7 +34,11 @@ const getBoard = async repository => {
 
   try {
     const boards = await axios.get(entry)
-    return typeof boards.data !== 'undefined' && boards.data.length > 0 ? boards.data[0] : null
+    if (typeof boards.data === 'undefined' || boards.data.length === 0) {
+      console.warn('No default board found. Please visit the board page in order to trigger the default GitLab board creation. Hopefully one day this is gonna be fixed by the GitLab team...')
+      return null
+    }
+    return boards.data[0]
   } catch (error) {
     throw new Error(error.message)
   }

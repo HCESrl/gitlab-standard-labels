@@ -5,7 +5,7 @@ const apiUrl = `${host}/api/v4/projects/`
 
 const getEntryPoint = (name, repository, base = apiUrl) => {
   const encodedRepository = encodeURIComponent(repository)
-  return `${base + repository}/${name}`
+  return `${base + encodedRepository}/${name}`
 }
 
 const setPrivateToken = token => {

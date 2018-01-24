@@ -19,8 +19,7 @@ const main = async (input = argv) => {
     const message = await requestedAction(input._, options)
     process.exit(0)
   } catch (error) {
-    console.log(error)
-    process.exit(1)
+    die(error)
   }
 }
 

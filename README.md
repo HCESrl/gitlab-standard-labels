@@ -28,7 +28,7 @@ Set the configuration in `config.json`
 ## Usage
 ```txt
   Usage:
-    $ gitlab-standard-labels <project-id>
+    $ gitlab-standard-labels <project-id|project-name>
 
   Commands:
     <default>   Create a set of labels for a project
@@ -40,6 +40,9 @@ Set the configuration in `config.json`
       -h, --help      Print usage
       -v, --version   Print version
 ```
+
+*  *project-id*: is the numeric ID of the repository;
+*  *project-name*: is the numeric the namespaced repository name (eg. "group/repo");
 
 
 ## License

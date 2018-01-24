@@ -5,7 +5,7 @@ Create a standard set of issue labels and board lists for a GitLab CE project vi
 ## Installation
 Install the package
 ```bash
-npm install --save gitlab-standard-labels
+npm install gitlab-standard-labels
 ```
 
 Copy the example configuration
@@ -34,7 +34,8 @@ Set the configuration in `config.json`
     <default>   Create a set of labels for a project
 
   Arguments:
-    <project-id|project-name>   `project-id` is the numeric ID of the repository, `project-name`is the the namespaced repository name (eg. "group/repo").
+    <project-id|project-name>   `project-id` is the numeric ID of the repository
+                                `project-name`is the the namespaced repository name (eg. "group/repo")
 
   Options:
       -t, --token=    The authentication token, overwrites the token in config.json, if defined

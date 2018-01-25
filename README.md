@@ -5,7 +5,7 @@ Create a standard set of issue labels and board lists for a GitLab CE project vi
 ## Installation
 Install the package globally:
 ```bash
-npm install -g HCESrl/gitlab-standard-labels
+npm install -g gitlab-standard-labels
 ```
 
 Optionally set the private token:

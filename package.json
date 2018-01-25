@@ -1,6 +1,6 @@
 {
   "name": "gitlab-standard-labels",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Create a standard set of issue labels and board lists for a GitLab CE project.",
   "main": "index.js",
   "scripts": {

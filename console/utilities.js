@@ -14,11 +14,16 @@ const defaultArgsOptions = {
 
 const usage = `
   Usage:
-    $ gitlab-standard-labels <project-id|project-name>
+    $ gitlab-standard-labels <repository-url>
+
   Commands:
     <default>   Create a set of labels for a project
+
+  Parameters:
+    repository-url  The complete URL to the repository (eg. https://gitlab.example.com/group/name)
+    
   Options:
-    -t, --token=    The authentication token, overwrites the token in config.json, if defined
+    -t, --token=    The authentication token, overwrites the token in the npm config, if defined
     -d, --delete    Delete previous existing labels and board lists before the creation
     -b, --board     Create default board lists
     -h, --help      Print usage

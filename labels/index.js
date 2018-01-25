@@ -1,15 +1,28 @@
+const {URL} = require('url')
 const {labels, boards} = require('./actions')
-const {setPrivateToken} = require('./api')
+const {setPrivateToken, setHost} = require('./api')
 const {die} = require('../console/utilities')
 
-const setStandardLabels = async ([repository], options) => {
-  if (typeof repository === 'undefined') die('Project ID/name is missing')
+
+const parseRepository = url => {
+  if (typeof url === 'undefined') die('Repository path is missing')
+
+  const {origin, pathname} = new URL(url)
+  
+  setHost(origin)
+
+  return pathname.replace(/^\//, '')
+}
+
+
+const setStandardLabels = async ([url], options) => {
+  const repository = parseRepository(url)
 
   try {
     if (options.token !== null) {
       setPrivateToken(options.token)
     }
-
+    
     const board = await boards.get(repository)
     
     if (options.delete) {

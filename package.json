@@ -11,11 +11,10 @@
     "url": "https://github.com/HCESrl/gitlab-standard-labels.git"
   },
   "license": "MIT",
-  "bin": {
-    "gitlab-standard-labels": "./index.js"
-  },
+  "bin": "./index.js",
   "dependencies": {
     "axios": "^0.17.1",
-    "minimist": "^1.2.0"
+    "minimist": "^1.2.0",
+    "npm-conf": "^1.1.3"
   }
 }

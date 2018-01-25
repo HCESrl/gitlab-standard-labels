@@ -1,4 +1,4 @@
-const {labels} = require('../config')
+const labels = require('./config')
 const {getEntryPoint} = require('./api')
 const axios = require('axios')
 

@@ -27,11 +27,12 @@ npm config set gitlab-standard-labels.token your-private-token
     <repository-url>   The complete URL to the repository (eg. https://gitlab.example.com/group/name)
 
   Options:
-      -t, --token=    The authentication token, overwrites the token in config.json, if defined
-      -d, --delete    Delete previous existing labels and board lists before the creation
-      -b, --board     Create default board lists
-      -h, --help      Print usage
-      -v, --version   Print version
+    -t, --token=    The authentication token, overwrites the token in the npm config, if defined
+    -c, --config=   The path to a custom labels configuration file
+    -d, --delete    Delete previous existing labels and board lists before the creation
+    -b, --board     Create default board lists
+    -h, --help      Print usage
+    -v, --version   Print current version
 ```
 
 ### Examples
@@ -53,6 +54,11 @@ gitlab-standard-labels -bd https://gitlab.example.com/group/name
 Create the default labels using a custom token:
 ```bash
 gitlab-standard-labels -b --token=some-other-token https://gitlab.example.com/group/name
+```
+
+Create the labels using a custom configuration file:
+```bash
+gitlab-standard-labels --config="/path/to/my/config.json" https://gitlab.example.com/group/name
 ```
 
 ## License

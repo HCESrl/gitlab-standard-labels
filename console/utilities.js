@@ -1,14 +1,15 @@
-const minimist = require('minimist')
+const minimist = require("minimist")
 
 const defaultArgsOptions = {
-  string: ['token'],
-  boolean: ['delete', 'board', 'version', 'help'],
+  string: ["token"],
+  boolean: ["delete", "board", "version", "help"],
   alias: {
-    d: 'delete',
-    b: 'board',
-    v: 'version',
-    h: 'help',
-    t: 'token'
+    d: "delete",
+    b: "board",
+    c: "config",
+    v: "version",
+    h: "help",
+    t: "token"
   }
 }
 
@@ -24,13 +25,14 @@ const usage = `
     
   Options:
     -t, --token=    The authentication token, overwrites the token in the npm config, if defined
+    -c, --config=   The path to a custom labels configuration file
     -d, --delete    Delete previous existing labels and board lists before the creation
     -b, --board     Create default board lists
     -h, --help      Print usage
-    -v, --version   Print version
+    -v, --version   Print current version
 `
 
-const {version} = require('../package.json')
+const {version} = require("../package.json")
 
 const printUsage = () => {
   console.info(usage)

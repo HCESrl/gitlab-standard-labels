@@ -1,7 +1,7 @@
-const { printUsage, printVersion } = require('./utilities')
-const { setStandardLabels } = require('../labels')
+const { printUsage, printVersion } = require("./utilities")
+const { setStandardLabels } = require("../labels")
 
-const defaultActionKey = 'default'
+const defaultActionKey = "default"
 
 const actions = {
   h: printUsage,
@@ -17,7 +17,7 @@ const parseUserAction = (input, defaultKey) => {
   const inputAction = entries.find(entry => {
     return availableActions.includes(entry[0]) && entry[1] === true
   })
-  return typeof inputAction !== 'undefined' ? inputAction[0] : defaultKey
+  return typeof inputAction !== "undefined" ? inputAction[0] : defaultKey
 }
 
 module.exports = {
